@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h3>This is a PWA demo!</h3>
+<script>
+  // 1. 注册ServiceWorker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(function (registration) {
+//        注册成功
+        console.log('serviceWorker registration successful with scope:', registration);
+      }).catch(function (err) {
+//        注册失败
+      console.log('serviceWorker registration fialed with:', err)
+    })
+  }
+</script>
+<img src="1.jpg" alt="wu">
+
+</body>
+</html>
